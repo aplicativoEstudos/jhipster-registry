@@ -1,0 +1,19 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          oidc:
+            issuer-uri: http://keycloakdesenv:8080/auth/realms/sistemas
+        registration:
+          oidc:
+            client-id: web_app
+            client-secret: 51272161-56ec-455e-a001-a446c4a57d58
+
+server:
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        # custom session cookie name to prevent conflict with another application on the same domain
+        name: JSESSIONID_REGISTRY
